@@ -1,0 +1,38 @@
+object DataModule1: TDataModule1
+  OnCreate = DataModuleCreate
+  Height = 166
+  Width = 495
+  object FDPhysMySQLDriverLink1: TFDPhysMySQLDriverLink
+    VendorLib = 'C:\Projetos\TesteDelphi\Win64\Debug\libmysql.dll'
+    Left = 128
+    Top = 32
+  end
+  object FDConnection1: TFDConnection
+    Params.Strings = (
+      'Database=VendasDB'
+      'User_Name=root'
+      'Password=Lenovo,2001'
+      'DriverID=MySQL')
+    Connected = True
+    Left = 256
+    Top = 32
+  end
+  object FDGUIxWaitCursor1: TFDGUIxWaitCursor
+    Provider = 'Forms'
+    Left = 368
+    Top = 32
+  end
+  object FDQuery1: TFDQuery
+    Active = True
+    Connection = FDConnection1
+    SQL.Strings = (
+      'SELECT * FROM Produtos;')
+    Left = 120
+    Top = 96
+  end
+  object DataSource1: TDataSource
+    DataSet = FDQuery1
+    Left = 216
+    Top = 96
+  end
+end
