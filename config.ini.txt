@@ -1,8 +1,0 @@
-[Database]
-Database=TesteDelphi
-Username=root
-Server=127.0.0.1
-Port=3306
-Password=Lenovo,2001
-LibraryPath=C:\Projetos\TesteDelphi\Win64\Debug\libmysql.dll
-UseSSL=False
